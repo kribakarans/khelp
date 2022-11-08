@@ -13,8 +13,8 @@ DIRKHTAGS=$TOPDIR/.khelp/tags
 
 print_usage() {
 	cat <<-USAGE
-	Usage: khelp [options] [topic-name] [search-pattern]
-	Khelp display information about pre-defined topics.
+	Usage: khelp [options] [topic-name] [content-name]
+	Khelp display information about predefined topics.
 
 	Options:
 	    -g  --grep     -- Grep topic or contents
