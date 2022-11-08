@@ -1,0 +1,7 @@
+add-ppa: Added APT repository
+
+	Atomixcloud:
+		curl -s https://raw.githubusercontent.com/atomixcloud/ppa/master/utils/addrepo.sh | bash
+
+	Kloudshell:
+		curl -s https://raw.githubusercontent.com/kloudshell/ppa/master/utils/addrepo.sh   | bash'

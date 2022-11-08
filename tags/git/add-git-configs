@@ -1,0 +1,6 @@
+add-git-configs: Add git global configurations
+
+Added username and email:
+	git config --global user.name "$GITHUB_USERNAME"
+	git config --global user.email "$GITHUB_USEREMAIL"
+
