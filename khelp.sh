@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PKGNAME=Khelp
-PKGVERSION=1.0b
+PKGVERSION=1.0c
 
 TOPDIR=$HOME
 DIRKHTAGS=$TOPDIR/.khelp/tags
