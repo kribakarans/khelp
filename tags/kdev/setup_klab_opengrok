@@ -1,0 +1,36 @@
+# Setup Klab OpenGrok search engine
+
+1. Pull standard OpenGrok image
+    docker pull opengrok/docker:latest
+
+2. Clone Klab image from OpenGrok image
+    docker tag opengrok/docker:latest klab/opengrok:latest
+
+3. Create directory to put project repos
+    sudo mkdir -p /var/klab/projects
+
+4. Start Klab docker engine
+    docker run \
+           -d --name klab \
+           -p 9595:8080/tcp \
+           -e SYNC_PERIOD_MINUTES="60" \
+           -v /var/klab/projects:/opengrok/src/ \
+              klab/opengrok
+
+5. Visit Klab projects at http://localhost:9595
+
+6. Index new projects to Klab engine
+    docker exec -it klab opengrok-indexer \
+                -a /opengrok/lib/opengrok.jar -- \
+                -s /opengrok/src \
+                -d /opengrok/data \
+                -c /usr/local/bin/ctags \
+                -W /opengrok/etc/configuration.xml \
+                -H -P -S -G -U http://localhost:8080
+
+7. Stop Klab engine
+    docker stop klab
+
+8. Remove Klab docker engine
+    docker rm klab
+    docker rmi klab/opengrok

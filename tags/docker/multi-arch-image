@@ -1,0 +1,27 @@
+# How to build the Multi-Architecture images
+
+## Method 1:
+1. Build an image for each architecture
+   docker build -t kribakarans/ubuntu:amd64 .
+   docker build -t kribakarans/ubuntu:arm64 .
+
+2. Push all images to docker hub repository
+   sudo docker push kribakarans/ubuntu:amd64
+   sudo docker push kribakarans/ubuntu:arm64
+
+3. Create a multi-architecture image
+   sudo docker manifest create kribakarans/ubuntu:latest kribakarans/ubuntu:amd64 kribakarans/ubuntu:arm64
+
+4. Push the multi-architecture image
+   sudo docker manifest push kribakarans/ubuntu:latest
+
+5. The image is now ready to be pulled regardless of architecture
+   docker pull kribakarans/ubuntu:latest
+
+6. Login to the Ubuntu shell
+   docker run -it kribakarans/ubuntu:latest bash
+
+## Method 2: With Buildx tool
+docker buildx build --push \
+                    --platform linux/amd64,linux/arm64 \
+                    --tag kribakarans/ubuntu:latest

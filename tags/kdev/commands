@@ -1,0 +1,52 @@
+# Kdev and Klab command line guide
+
+# Kdev command line tools:
+    kvim  -- Open file at specific line at vim
+    cdiff -- Parse and view diff tool output in terminal
+    kdiff -- Parse and view diff tool output with vimdiff tool
+    camon -- CamON Live Streaming with GStreamer
+    cexec -- Instantly compile and run C code
+    gtkx  -- Instantly compile and run GTK C code
+
+# Kdev project handlers:
+    krb   -- Build Kreport of the current project
+             Following task will perform:
+             -- make codereview
+             -- make docs
+             -- kdev-build-devcode
+             -- gitstats
+    krc   -- Clean Kreport of the current project
+    klook -- Lookup repository status for swap, .out files and version control status
+    kdev-make-doxyfile -- Generate doxyfile to generate doxygen documentaion
+    kdev-build-devcode -- Build source code cross-reference with codebrowser
+
+# Kdev Chroot commands:
+    kdev-chroot-create  -- Create new chroot '/var/klab/chroot/'
+    kdev-chroot-clean   -- Delete tmp chroot '/var/klab/chroot/'
+    kdev-chroot-login   -- Login to the tmp chroot '/var/klab/chroot/'
+    kdev-chroot-install -- Install user package into temp chroot '/tmp/chroot/'
+    kdev-chroot-clean-install -- Clean install user package into temp chroot '/tmp/chroot/'
+
+# Kdev OpenGrok localhost commands:
+    kdev-index-source -- Index projects in OpenGrok in localhost
+
+# Klab OpenGrok docker commands:
+    klab-start   -- Start Klab OpenGrok docker engine
+    klab-restart -- Restart Klab OpenGrok docker engine
+    klab-index-source -- Index projects in Klab OpenGrok docker engine
+
+# Klab Ubuntu docker commands:
+    kvm/klab-ubuntu-run -- Create/Run klab-ubuntu docker ubuntu vm
+    klab-ubuntu-commit  -- Commit klab-ubuntu container to image
+    klab-ubuntu-save    -- Save klab-ubuntu image to archive file
+    klab-ubuntu-load    -- Load klab-ubuntu image from archive file
+
+# Klab Doxygen docker commands:
+    klab-doxygen-run     -- Run Klab Doxygen server
+    klab-doxygen-start   -- Start Klab Doxygen server
+    klab-doxygen-bash    -- Login to Doxygen server console
+
+# Klab Webtop docker commands:
+    kwm/klab-webtop-run  -- Run Klab Webtop server
+    klab-webtop-start    -- Start Klab Webtop server
+    klab-webtop-bash     -- Login to Webtop server console
