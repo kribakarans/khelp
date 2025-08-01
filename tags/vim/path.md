@@ -1,5 +1,11 @@
-# Vim run time path:
-Open Vim and type `:echo &runtimepath` to see a list of directories where Vim looks for plugins.
+# Vim Runtime Path
+
+Open Vim and type:
+```vim
+:echo &runtimepath
+```
+This will show a list of directories where Vim looks for plugins.
+
 ```
 ## ~/.vim
     ├── colors

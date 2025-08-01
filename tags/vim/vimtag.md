@@ -1,142 +1,106 @@
-# C tags in Vim
+# Ctags in Vim
 
-## Ctags
-
-### 1. Jump to Definition
-
-```
-    Ctrl-]
+## Jump to Definition
+Press:
+```vim
+Ctrl-]
 ```
 
-### 2. Return Back
-
-```
-    Ctrl-T
-```
-
-### 3. List Matching Tags
-
-```
-    :ts   " (stands for tag-select)
+## Return Back
+Press:
+```vim
+Ctrl-T
 ```
 
-- Lists all matching tags if multiple definitions exist.
-- Then press the number and hit Enter to jump.
-
-### 4. Tag Stack Navigation
-
-Vim maintains a tag stack:
-
+## List Matching Tags
+Type:
+```vim
+:ts   " (stands for tag-select)
 ```
-    :tags → shows the tag stack
-    :pop or Ctrl-T → go back
-    :tag or Ctrl-] → go forward
-```
+Lists all matching tags if multiple definitions exist. Then press the number and hit Enter to jump.
 
-You can also do:
-
-```
-    :pop 2    " Go back 2 tags
-    :tag 3    " Go forward to the 3rd tag in the stack
+## Tag Stack Navigation
+Vim maintains a tag stack for navigation:
+```vim
+:tags        " shows the tag stack
+:pop or Ctrl-T   " go back
+:tag or Ctrl-]   " go forward
+:pop 2      " Go back 2 tags
+:tag 3      " Go forward to the 3rd tag in the stack
 ```
 
-### 5. Manually Search Tags
-
-```
-    :tag TAGNAME
-```
-
-### 6. Autocompletion with Tags
-
-```
-    <C-x><C-]>   " Ctrl-X Ctrl-] in insert mode
+## Manually Search Tags
+Type:
+```vim
+:tag TAGNAME
 ```
 
-### 7. Use :tselect to pick from multiple matches
-
-```
-    :tselect TAGNAME
-```
-
-- Shows a list of locations (like function overloads).
-- Pick the one you want.
-
-### 8. Use :tjump to jump to a specific match
-
-Like :tselect, but jumps to first if only one match
-
-```
-    :tjump TAGNAME
+## Autocompletion with Tags
+In insert mode, press:
+```vim
+<C-x><C-]>   " Ctrl-X Ctrl-]
 ```
 
-### 9. Browse All Tags
+## Use :tselect to pick from multiple matches
+Type:
+```vim
+:tselect TAGNAME
+```
+Shows a list of locations (like function overloads). Pick the one you want.
 
+## Use :tjump to jump to a specific match
+Like :tselect, but jumps to first if only one match. Type:
+```vim
+:tjump TAGNAME
+```
+
+## Browse All Tags
 You can open the tags file or use:
-
-To open the tag in a split window.
-
-```
-    :stag some_tag
+To open the tag in a split window, type:
+```vim
+:stag some_tag
 ```
 
-### 10. Explore with Tagbar Plugin
+## Explore with Tagbar Plugin
 
 ## Auto-Generate Ctags on Save
-
 Keeps tags up to date automatically.
-
 Add to .vimrc (optional):
-
+```vim
+autocmd BufWritePost *.c,*.h silent! !ctags -R .
 ```
-    autocmd BufWritePost *.c,*.h silent! !ctags -R .
-```
 
-### Search manually for usages
-
+## Search manually for usages
 - Press / (search)
     - n — next occurrence
     - N — previous occurrence
 
-## Using VimGrep
+# Using VimGrep
 
-### Use vimgrep to get all global references
-
+## Use vimgrep to get all global references
 This gives you a list of all matches in your project:
-
-```
-    :vimgrep /TAGNAME/ **/*.c **/*.h
-    :copen # To open the quickfix window
-```
-
-Then use:
-
-```
-    :cnext / :cprev to jump through results
-    :cclose to close it
+```vim
+:vimgrep /TAGNAME/ **/*.c **/*.h
+:copen # To open the quickfix window
+:cnext / :cprev to jump through results
+:cclose to close it
 ```
 
-### Use vimgrep to get all local references
-
+## Use vimgrep to get all local references
 This gives you a list of all matches in your project:
-
-```
-    :lvimgrep /TAGNAME/ **/*.c **/*.h
-    :copen
-```
-
-Now, use:
-
-```
-    :lnext  — go to next match in location list
-    :lprev  — go to previous match
-    :lclose — close it
+```vim
+:lvimgrep /TAGNAME/ **/*.c **/*.h
+:copen
+:lnext  — go to next match in location list
+:lprev  — go to previous match
+:lclose — close it
 ```
 
-### Summary
+## Summary
 
-| Feature       | Quickfix List (:c*)     | Location List (:l*)
-|---------------|-------------------------|--------------------
-| Scope         | Global (all windows)    | Local (current window only)
-| Command       | `:cnext`, `:cprev`, etc | `:lnext`, `:lprev`, etc
-| Open list     | `:copen`                | `:lopen`
-| Populate with | `:vimgrep`, `:grep`     | `:lvimgrep`, `:lgrep`
+| Feature       | Quickfix List (:c*)     | Location List (:l*) |
+|---------------|-------------------------|--------------------|
+| Scope         | Global (all windows)    | Local (current window only) |
+| Command       | `:cnext`, `:cprev`, etc | `:lnext`, `:lprev`, etc |
+| Open list     | `:copen`                | `:lopen` |
+| Populate with | `:vimgrep`, `:grep`     | `:lvimgrep`, `:lgrep` |

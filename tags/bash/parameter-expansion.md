@@ -1,6 +1,9 @@
-Parameter Expansion: Feature in Bash that allows you to manipulate variables in various ways.
+# Bash Parameter Expansion
+
+Parameter expansion is a feature in Bash that allows you to manipulate variables in various ways.
 
 Here are some other combinations you can use:
+```
     ${var}          : The value of the variable var.
     ${#var}         : The length of the value of var.
     ${var:offset}   : The substring of the value of var, starting at offset.
@@ -17,3 +20,4 @@ Here are some other combinations you can use:
     ${var//pattern/replacement} : Replace all matching occurrences of pattern with replacement in the value of var.
     ${var/#pattern/string}: If the value of var starts with pattern, replace it with string.
     ${var/%pattern/string}: If the value of var ends with pattern, replace it with string.
+```

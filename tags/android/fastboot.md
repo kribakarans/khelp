@@ -48,4 +48,5 @@ fastboot format system
 fastboot getvar all
 fastboot oem device-info
 ```
+
 ---

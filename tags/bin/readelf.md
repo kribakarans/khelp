@@ -1,16 +1,21 @@
-# Lookup symbols in an ELF file:
+# ELF Symbol Lookup
 
-## Using `readelf`:
+## Using `readelf`
 
-  `readelf -s <your-elf-file>`
+```sh
+readelf -s <your-elf-file>
+readelf -s <your-executable> | grep 'my_fun'
+```
 
-  `readelf -s <your-executable> | grep 'my_fun'`
+## Using `nm`
 
-## Using 'nm':
+```sh
+nm <your-executable> | grep 'my_fun'
+```
 
-  `nm <your-executable> | grep 'my_fun'`
+## Using `objdump`
 
-## Using `objdump`:
-
-  `objdump -t <your-executable> | grep 'my_fun'`
+```sh
+objdump -t <your-executable> | grep 'my_fun'
+```
 

@@ -1,30 +1,63 @@
-# Date command usage:
+# Date Command Usage
 
-## Date:
-  `date +"%D`
+## Date
 
-## Time:
-  `date +"%T`
+```bash
+date +"%D"
+```
+*Output: MM/DD/YY*
 
-## Time with milliseconds:
-  `date +"%T.%3N"`
+## Time
 
-## YYYYMMDD::HHMMSS format:
-  `date "+%Y%m%d::%H%M%S"`
+```bash
+date +"%T"
+```
+*Output: HH:MM:SS*
 
-## Seconds:
-Current timestamp in seconds since the Unix epoch (January 1, 1970, 00:00:00 UTC).
-  `date +%s`
+## Time with Milliseconds
 
-## Milliseconds:
-Current timestamp in milliseconds since the Unix epoch.
-  `date +%s%3N`
-  `echo $(($(date +%s%N)/1000000))`
+```bash
+date +"%T.%3N"
+```
+*Output: HH:MM:SS.mmm*
 
-## Microseconds:
-Current timestamp in microseconds since the Unix epoch.
-  `date +%s%6N`
+## YYYYMMDD::HHMMSS Format
 
-## Nano seconds:
-Current timestamp in nanoseconds since the Unix epoch.
-  `date +%s%N`
+```bash
+date "+%Y%m%d::%H%M%S"
+```
+*Output: YYYYMMDD::HHMMSS*
+
+## Seconds
+
+Current timestamp in seconds since the Unix epoch (January 1, 1970, 00:00:00 UTC):
+
+```bash
+date +%s
+```
+
+## Milliseconds
+
+Current timestamp in milliseconds since the Unix epoch:
+
+```bash
+date +%s%3N
+# or
+echo $(($(date +%s%N)/1000000))
+```
+
+## Microseconds
+
+Current timestamp in microseconds since the Unix epoch:
+
+```bash
+date +%s%6N
+```
+
+## Nanoseconds
+
+Current timestamp in nanoseconds since the Unix epoch:
+
+```bash
+date +%s%N
+```
