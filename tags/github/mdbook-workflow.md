@@ -1,6 +1,6 @@
-# Deploy KBook to Github Pages
+# Deploy MDbook to Github Pages
 
-name: Deploy KBook
+name: Deploy MDBook
 
 on:
   # Runs on pushes targeting the default branch
@@ -28,39 +28,33 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      MDBOOK_VERSION: 0.4.36
       DIR_GITHUB_WORKFLOW: .github/workflows
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install KBook
+      - name: Install MDBook
         run: |
-          echo "Clone KBook ..."
-          git clone https://github.com/kribakarans/kbook.git
+          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
+          rustup update
+          cargo install --version ${MDBOOK_VERSION} mdbook
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Build KBook
+      - name: Build MDBook
         run: |
-          (
-            set -e
-
-            cd kbook
-            echo "Install KBook ..."
-            make install
-          )
-
-          rm -rf kbook
-          echo "Build KBook ..."
-          kbook "Khelp" "tags" "https://github.com/kribakarans/khelp/"
+          mdbook build
+          cp $DIR_GITHUB_WORKFLOW/res/favicon.png book/favicon.png
+          cp $DIR_GITHUB_WORKFLOW/res/favicon.svg book/favicon.svg
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./tags
+          path: ./book
 
   # Deployment job
   deploy:

@@ -1,8 +1,0 @@
-shlibdeps: Shared library dependencies
-
-List_deps:
-    objdump -p ./kloudshell.out | grep NEEDED
-    dpkg-shlibdeps -O ./kloudshell.out (it requires debian/control)
-
-Create_deps_file: Create debian/substvars deps file:
-    dpkg-shlibdeps -e ./kloudshell.out (it requires debian/control)

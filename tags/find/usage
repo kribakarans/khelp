@@ -1,7 +1,0 @@
-# Find command usage:
-
-## Find files and sort it:
-  `find . -name *.h -exec dirname {} \; | sort > sorted.txt`
-
-## Find files and run 'bashcov' command for each file
-  `find /path/to/your/project -type f -name "*.sh" -exec bashcov {} \;`

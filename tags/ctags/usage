@@ -1,7 +1,0 @@
-# Ctags command line usage:
-
-cscope -Rbv
-cscope -d
-
-set tags=tags
-ctags -RV *

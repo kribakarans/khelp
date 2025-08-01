@@ -1,2 +1,0 @@
-# Print the modified in each commit:
-    `git log --name-only`

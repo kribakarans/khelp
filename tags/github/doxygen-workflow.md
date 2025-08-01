@@ -1,6 +1,6 @@
-# Deploy KBook to Github Pages
+# Deploy Doxygen Documentation to GitHub Pages
 
-name: Deploy KBook
+name: Deploy Doxygen
 
 on:
   # Runs on pushes targeting the default branch
@@ -26,41 +26,26 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-
-    env:
-      DIR_GITHUB_WORKFLOW: .github/workflows
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install KBook
+      - name: Installing Doxygen
         run: |
-          echo "Clone KBook ..."
-          git clone https://github.com/kribakarans/kbook.git
+          sudo apt-get update && \
+          sudo apt-get install -y --no-install-recommends doxygen graphviz
 
       - name: Setup Pages
-        id: pages
         uses: actions/configure-pages@v4
 
-      - name: Build KBook
-        run: |
-          (
-            set -e
-
-            cd kbook
-            echo "Install KBook ..."
-            make install
-          )
-
-          rm -rf kbook
-          echo "Build KBook ..."
-          kbook "Khelp" "tags" "https://github.com/kribakarans/khelp/"
+      - name: Building Doxygen
+        run: doxygen docs/doxygen.cfg
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./tags
+          name: github-pages
+          path: ./__html/doxygen
 
   # Deployment job
   deploy:
