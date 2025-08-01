@@ -7,7 +7,7 @@ PKGVERSION=2.0
 
 VERBOSE=0
 DIRKHELP=$HOME/khelp
-DIRKHTAGS=$DIRKHELP/src
+DIRKHTAGS=$DIRKHELP/tags
 
 source $DIRKHELP/scripts/kstat.sh
 source $DIRKHELP/scripts/utils.sh
