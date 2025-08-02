@@ -10,7 +10,7 @@ In Bash, you can perform various transformations on variables using parameter ex
 | `${var,,}`            | Transform all characters in `var` to lowercase.                             |
 | `${var@operator}`     | Perform a shell operation on the value of `var` using the specified operator.|
 
-**Common operators for `${var@operator}`:**
+### Common operators for `${var@operator}`:
 
 | Operator | Description                                                                 |
 |----------|-----------------------------------------------------------------------------|

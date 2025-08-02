@@ -18,7 +18,7 @@ pkg-config --cflags --libs <package-name>
 pkg-config --static --libs <package-name>
 ```
 
-# Work Samples with Curl Package
+## Work Samples with Curl Package
 
 ## Print CFLAGS
 

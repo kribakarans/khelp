@@ -5,28 +5,32 @@
 ```bash
 date +"%D"
 ```
-*Output: MM/DD/YY*
+
+Output: MM/DD/YY
 
 ## Time
 
 ```bash
 date +"%T"
 ```
-*Output: HH:MM:SS*
+
+Output: HH:MM:SS
 
 ## Time with Milliseconds
 
 ```bash
 date +"%T.%3N"
 ```
-*Output: HH:MM:SS.mmm*
+
+Output: HH:MM:SS.mmm
 
 ## YYYYMMDD::HHMMSS Format
 
 ```bash
 date "+%Y%m%d::%H%M%S"
 ```
-*Output: YYYYMMDD::HHMMSS*
+
+Output: YYYYMMDD::HHMMSS
 
 ## Seconds
 

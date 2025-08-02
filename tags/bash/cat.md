@@ -1,6 +1,6 @@
 # Concatenate log text with `cat`
 
-## 1. Print to stdout
+### 1. Print to stdout
 
 ```bash
 cat <<-USAGE
@@ -10,7 +10,7 @@ exit 0
 USAGE
 ```
 
-## 2. Print to file
+### 2. Print to file
 
 ```bash
 cat <<-USAGE > hello.sh

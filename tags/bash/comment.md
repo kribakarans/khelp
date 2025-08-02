@@ -12,6 +12,7 @@ COMMENT
 echo "This is not a comment."
 ```
 
-### Explanation
+## Explanation
+
 - Use `#` for single-line comments.
 - The `: <<'COMMENT' ... COMMENT` syntax creates a multi-line comment block (using a here-document ignored by the shell).

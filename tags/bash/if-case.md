@@ -6,7 +6,9 @@
 flag_a=true
 flag_b=false
 ```
+
 or
+
 ```bash
 flag_a=1
 flag_b=0
@@ -36,8 +38,6 @@ else
 fi
 ```
 
----
-
 ## Testing Conditions in Bash
 
 | Flag/Operator | Description | Example |
@@ -56,8 +56,6 @@ fi
 
 - Use single brackets `[ ]` for basic tests.
 - Use double brackets `[[ ]]` for advanced expressions.
-
----
 
 ## File Test Flags in Bash
 

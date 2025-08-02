@@ -11,8 +11,6 @@ done < input.txt
 - `IFS=`: Sets the Internal Field Separator to an empty string, preserving leading/trailing whitespace.
 - `read -r`: Reads the line as-is, without interpreting backslashes.
 
----
-
 ## Convert Output to a Bash Array and Iterate Through Each Element
 
 ```bash
@@ -28,8 +26,6 @@ for package_info in "${pip_list_array[@]}"; do
     echo "$package_info"
 done
 ```
-
----
 
 ## Read the File from Bottom to Top
 

@@ -5,6 +5,7 @@
 ### Method 1
 
 **/etc/bash.bashrc:**
+
 ```bash
 [ -z "$PS1" ] && return
 
@@ -18,6 +19,7 @@ fi
 ### Method 2
 
 **~/.bashrc:**
+
 ```bash
 case $- in
     *i*) ;;

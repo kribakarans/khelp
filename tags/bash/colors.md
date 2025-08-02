@@ -113,9 +113,9 @@ done
 
 ## References
 
-- https://www.codegrepper.com/tpc/bash+colors
-- https://dev.to/ifenna__/adding-colors-to-bash-scripts-48g4
-- https://misc.flogisoft.com/bash/tip_colors_and_formatting
-- https://gist.github.com/JBlond/2fea43a3049b38287e5e9cefc87b2124
-- https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
-- https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix
+- <https://www.codegrepper.com/tpc/bash+colors>
+- <https://dev.to/ifenna__/adding-colors-to-bash-scripts-48g4>
+- <https://misc.flogisoft.com/bash/tip_colors_and_formatting>
+- <https://gist.github.com/JBlond/2fea43a3049b38287e5e9cefc87b2124>
+- <https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux>
+- <https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix>

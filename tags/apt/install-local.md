@@ -8,7 +8,7 @@ cd <package-name-version>
 sudo checkinstall -D --install=no --fstrans=yes --pakdir="$HOME/.local/" make install
 ```
 
-# Install Package Files in a Custom Path (Not Binaries)
+## Install Package Files in a Custom Path (Not Binaries)
 
 Install package files to a custom directory without installing binaries:
 

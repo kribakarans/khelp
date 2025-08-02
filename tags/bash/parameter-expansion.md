@@ -3,7 +3,8 @@
 Parameter expansion is a feature in Bash that allows you to manipulate variables in various ways.
 
 Here are some other combinations you can use:
-```
+
+```bash
     ${var}          : The value of the variable var.
     ${#var}         : The length of the value of var.
     ${var:offset}   : The substring of the value of var, starting at offset.

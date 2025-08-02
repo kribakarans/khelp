@@ -1,12 +1,12 @@
 # Bash Array Usage
 
-## Syntax
+### Syntax
 
 ```bash
 ARR=("element-1" "element-2" "element-3")
 ```
 
-## Usage
+### Usage
 
 ```bash
 for VAR in "${ARR[@]}"; do
@@ -14,7 +14,7 @@ for VAR in "${ARR[@]}"; do
 done
 ```
 
-## Examples
+### Examples
 
 ```bash
 a=(one two three)   # array definition
@@ -24,8 +24,6 @@ echo "${#a[@]}"     # print number of elements in array a
 ```
 
 > If you put a single variable in an array, then you just have an array with a single element.
-
----
 
 ## Bash Parentheses Usage
 
@@ -38,7 +36,7 @@ There are many situations in bash where parentheses and similar characters are u
 - **Function definition:** `fun () { echo x; }`
 - **Pattern list in glob (if extglob is enabled):** `?()`, `*()`, `+()`, `@()`, `!()`
 
-Example usages:
+### Example usages
 
 ```bash
 # Command substitution
