@@ -1,26 +1,37 @@
 # Ctags in Vim
 
-## Jump to Definition
+## Tag Navigation
+
+### Jump to Definition
+
 Press:
+
 ```vim
 Ctrl-]
 ```
 
-## Return Back
+### Return Back
+
 Press:
+
 ```vim
 Ctrl-T
 ```
 
 ## List Matching Tags
+
 Type:
+
 ```vim
 :ts   " (stands for tag-select)
 ```
+
 Lists all matching tags if multiple definitions exist. Then press the number and hit Enter to jump.
 
 ## Tag Stack Navigation
+
 Vim maintains a tag stack for navigation:
+
 ```vim
 :tags        " shows the tag stack
 :pop or Ctrl-T   " go back
@@ -30,55 +41,70 @@ Vim maintains a tag stack for navigation:
 ```
 
 ## Manually Search Tags
+
 Type:
+
 ```vim
 :tag TAGNAME
 ```
 
 ## Autocompletion with Tags
+
 In insert mode, press:
+
 ```vim
 <C-x><C-]>   " Ctrl-X Ctrl-]
 ```
 
 ## Use :tselect to pick from multiple matches
+
 Type:
+
 ```vim
 :tselect TAGNAME
 ```
+
 Shows a list of locations (like function overloads). Pick the one you want.
 
 ## Use :tjump to jump to a specific match
+
 Like :tselect, but jumps to first if only one match. Type:
+
 ```vim
 :tjump TAGNAME
 ```
 
 ## Browse All Tags
+
 You can open the tags file or use:
 To open the tag in a split window, type:
+
 ```vim
 :stag some_tag
 ```
 
-## Explore with Tagbar Plugin
-
 ## Auto-Generate Ctags on Save
+
 Keeps tags up to date automatically.
+
 Add to .vimrc (optional):
+
 ```vim
 autocmd BufWritePost *.c,*.h silent! !ctags -R .
 ```
 
 ## Search manually for usages
+
 - Press / (search)
-    - n — next occurrence
-    - N — previous occurrence
+  - n — next occurrence
+  - N — previous occurrence
 
-# Using VimGrep
+## Using VimGrep
 
-## Use vimgrep to get all global references
+### Use vimgrep to get all global references
+
 This gives you a list of all matches in your project:
+
 ```vim
 :vimgrep /TAGNAME/ **/*.c **/*.h
 :copen # To open the quickfix window
@@ -86,8 +112,10 @@ This gives you a list of all matches in your project:
 :cclose to close it
 ```
 
-## Use vimgrep to get all local references
+### Use vimgrep to get all local references
+
 This gives you a list of all matches in your project:
+
 ```vim
 :lvimgrep /TAGNAME/ **/*.c **/*.h
 :copen
@@ -95,6 +123,8 @@ This gives you a list of all matches in your project:
 :lprev  — go to previous match
 :lclose — close it
 ```
+
+## Explore with Tagbar Plugin
 
 ## Summary
 

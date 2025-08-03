@@ -1,9 +1,13 @@
 # Setup New Virtual Host in Apache2
 
-## 1. Create Site File at /usr/local/test
-- `index.html`
+## 1. Create Site File at `/usr/local/test`
 
-## 2. Add Site Configs at /etc/apache2/sites-available/test.conf
+```bash
+index.html
+```
+
+## 2. Add Site Configs at `/etc/apache2/sites-available/test.conf`
+
 ```apache
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
@@ -22,15 +26,18 @@
 </VirtualHost>
 ```
 
-## 3. Enable Site test.conf
+## 3. Enable Site `test.conf`
+
 ```bash
 sudo a2ensite test.conf
 ```
 
 ## 4. Access the New Test Site
-- `http://localhost/test/`
 
-# For New CGI Site
+Visit <http://localhost/test/>
+
+## For New CGI Site
+
 ```apache
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
