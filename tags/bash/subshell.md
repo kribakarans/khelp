@@ -5,7 +5,7 @@ A subshell is a child process launched by a shell (or shell script).
 ## Running process in subshell
 
 ```bash
-  (cd $HTTP_ROOT && /usr/bin/python3 -m http.server --cgi 9002)
+(cd $HTTP_ROOT && /usr/bin/python3 -m http.server --cgi 9002)
 ```
 
 ## Running parallel processes in subshells
@@ -17,12 +17,12 @@ A subshell is a child process launched by a shell (or shell script).
 
 ## Execute commands in a subshell
 
-### 1. Subshell ( ... )
+### 1. `Subshell ( ... )`
 
 - The subshell ( ... ) is used to group and isolate commands.
 - This creates a new subshell environment, similar to what bash -c does, but without invoking a new Bash process explicitly.
 
-  ### Example
+  **Example:**
 
   ```bash
   (echo "Hello, World!")
@@ -30,13 +30,13 @@ A subshell is a child process launched by a shell (or shell script).
   (cd '$HTTP_ROOT'; python3 -m http.server --cgi 9000 &> /tmp/http_server.log &) # This is always return 0   to the parent shell
   ```
 
-### 2. bash -c
+### 2. `bash -c`
 
 - Invokes a new instance of the Bash shell explicitly.
 - Takes a string as an argument that contains the command to be executed.
 - Executes the command in a new shell process.
 
-  ### Example
+  **Example:**
 
   ```bash
   bash -c 'echo "Hello, World!"'
@@ -44,14 +44,14 @@ A subshell is a child process launched by a shell (or shell script).
   bash -c "(cd '$HTTP_ROOT'; python3 -m http.server --cgi 9000 &> /tmp/http_server.log &)" # This is always return 0   to the parent shell
   ```
 
-### 3. eval
+### 3. `eval`
 
 - Evaluates and executes the provided arguments as a shell command.
 - Takes the arguments directly, without creating a new shell instance.
 - Useful for evaluating and executing dynamic commands constructed at runtime.
 
-  ### Example
-  
+  **Example:**
+
   ```bash
   eval 'echo "Hello, World!"'
   ```

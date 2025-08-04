@@ -39,10 +39,10 @@ echo_error() {
 
 ## Description
 
-- `-e`      -- Enable interpretation of backslash escapes  
-- `\e[`     -- Begin the color modifications  
-- `COLORm`  -- Color Code + ‘m’ at the end  
-- `\e[0m`   -- End the color modifications  
+- `-e`      -- Enable interpretation of backslash escapes
+- `\e[`     -- Begin the color modifications
+- `COLORm`  -- Color Code + ‘m’ at the end
+- `\e[0m`   -- End the color modifications
 
 ## ANSI Color Codes
 

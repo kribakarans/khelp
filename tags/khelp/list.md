@@ -8,7 +8,7 @@
       -- apt
       -- bash
       -- docker
-      ```
+    ```
 
 2. List all topics in the specified tag:
 

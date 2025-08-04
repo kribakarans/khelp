@@ -41,7 +41,7 @@ git rev-parse --symbolic-full-name --abbrev-ref @{u} | sed 's/\/.*//'
 Get the commit hash of a specific branch or tag
 
 ```bash
-git rev-parse <branch_or_tag_name> 
+git rev-parse <branch_or_tag_name>
 ```
 
 ### Commit Hash to Short Hash

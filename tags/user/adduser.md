@@ -7,7 +7,7 @@ adduser <username> --home /home/<username> --shell /bin/bash
 useradd <username> -m -d /home/<username> -s /bin/bash <username>
 ```
 
-### Examples
+**Examples:**
 
 ```bash
 adduser username
@@ -38,7 +38,7 @@ groupadd -g 1000 <username>
 useradd -d /home/<username> -s /bin/bash -m <username> -u 1000 -g 1000
 ```
 
-### Examples
+**Examples:**
 
 ```bash
 groupadd -g 1000 username
@@ -52,7 +52,7 @@ groups <username>           # To list the groups of the user belongs to
 usermod -aG sudo <username> # Add the new user to a sudo group
 ```
 
-### Examples
+**Examples:**
 
 ```bash
 usermod -aG sudo username

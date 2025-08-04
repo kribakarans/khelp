@@ -169,4 +169,3 @@ adb shell df -h                             # Show disk usage
   ```bash
   adb shell monkey -p com.example.app -v 1
   ```
-  

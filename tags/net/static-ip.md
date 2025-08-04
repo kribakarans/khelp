@@ -79,4 +79,3 @@
   sudo ip addr flush wlp0s20f3 &&
   sudo systemctl restart network-manager.service
   ```
-  

@@ -14,7 +14,9 @@ It also includes CGI script support and setting custom port numbers.
 
 ```bash
 # Serve current directory on port 8000
-python3 -m http.server 8000
+
+python  -m SimpleHTTPServer 8000 # Python 2.X
+python3 -m http.server 8000      # Python 3.X
 ```
 
 ### Python CGI Server (with CGI support)
@@ -22,7 +24,9 @@ python3 -m http.server 8000
 ```bash
 # Place CGI scripts in ./cgi-bin/
 # Use --cgi flag for CGI support
-python3 -m http.server 8000 --cgi
+
+python  -m CGIHTTPServer 8000     # Python 2.X
+python3 -m http.server --cgi 8000 # Python 3.X
 ```
 
 CGI scripts should be placed in a `cgi-bin/` directory and have executable permissions:
@@ -58,6 +62,13 @@ Default routing:
 
 ```bash
 php -S localhost:8000 router.php
+```
+
+### Host Control
+
+```bash
+php -S 0.0.0.0:8080   # Allows external host connections
+php -S localhost:8080 # Localhost does'nt allows external host connections
 ```
 
 ## 3. Node.js Simple HTTP Server

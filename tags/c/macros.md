@@ -1,4 +1,4 @@
-# C Macro usages
+# C Macro Usages
 
 Preprocessor directive to include a meaningful error message that will stop the build when STANDALONE is defined.
 

@@ -5,11 +5,16 @@ It is particularly useful when you want to apply a command to a list of items ge
 
 **Syntax:**
 
-  `command | xargs [options] [command [initial-arguments]]`
+```bash
+command | xargs [options] [command [initial-arguments]]
+```
 
 **Example:**
 List of file names and you want to delete them using the rm command.
-  `ls *.txt | xargs rm`
+
+```bash
+ls *.txt | xargs rm
+```
 
 ## Options
 
